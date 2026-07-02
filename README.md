@@ -14,7 +14,7 @@ BETA
 # 安装
 
 ```bash
-composer require wilbur-yu/hyperf-cache-ext
+composer require wenber-yu/hyperf-cache-ext
 ```
 
 # 配置
