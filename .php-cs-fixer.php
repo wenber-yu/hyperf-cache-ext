@@ -3,17 +3,17 @@
 declare(strict_types=1);
 
 /**
- * This file is part of project wilbur-yu/hyperf-cache-ext.
+ * This file is part of project wenber-yu/hyperf-cache-ext.
  *
  * @author   wenbo@wenber.club
- * @link     https://github.com/wilbur-yu
+ * @link     https://github.com/wenber-yu
  */
 
 $header = <<<'EOF'
-This file is part of project wilbur-yu/hyperf-cache-ext.
+This file is part of project wenber-yu/hyperf-cache-ext.
 
 @author   wenbo@wenber.club
-@link     https://github.com/wilbur-yu
+@link     https://github.com/wenber-yu
 EOF;
 
 return (new PhpCsFixer\Config())
