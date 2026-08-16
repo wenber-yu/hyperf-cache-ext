@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace WilburYu\HyperfCacheExt\Exception;
+namespace WenberYu\HyperfCacheExt\Exception;
 
 use RuntimeException;
 

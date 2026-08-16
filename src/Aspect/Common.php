@@ -7,16 +7,16 @@
  * @link     https://github.com/wenber-yu
  */
 
-namespace WilburYu\HyperfCacheExt\Aspect;
+namespace WenberYu\HyperfCacheExt\Aspect;
 
 use Hyperf\Contract\ConfigInterface;
 use Hyperf\Di\Aop\ProceedingJoinPoint;
 use Hyperf\Stringable\Str;
 use Psr\Http\Message\ResponseInterface;
-use WilburYu\HyperfCacheExt\Annotation\ConcurrencyRateLimiter;
-use WilburYu\HyperfCacheExt\Annotation\CounterRateLimiter;
-use WilburYu\HyperfCacheExt\Annotation\CounterRateLimiterWithRedis;
-use WilburYu\HyperfCacheExt\Annotation\DurationRateLimiter;
+use WenberYu\HyperfCacheExt\Annotation\ConcurrencyRateLimiter;
+use WenberYu\HyperfCacheExt\Annotation\CounterRateLimiter;
+use WenberYu\HyperfCacheExt\Annotation\CounterRateLimiterWithRedis;
+use WenberYu\HyperfCacheExt\Annotation\DurationRateLimiter;
 
 trait Common
 {

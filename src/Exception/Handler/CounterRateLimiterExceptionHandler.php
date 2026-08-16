@@ -7,13 +7,13 @@
  * @link     https://github.com/wenber-yu
  */
 
-namespace WilburYu\HyperfCacheExt\Exception\Handler;
+namespace WenberYu\HyperfCacheExt\Exception\Handler;
 
 use Hyperf\ExceptionHandler\ExceptionHandler;
 use Hyperf\HttpMessage\Stream\SwooleStream;
 use Psr\Http\Message\ResponseInterface;
 use Throwable;
-use WilburYu\HyperfCacheExt\Exception\CounterRateLimiterException;
+use WenberYu\HyperfCacheExt\Exception\CounterRateLimiterException;
 
 class CounterRateLimiterExceptionHandler extends ExceptionHandler
 {

@@ -9,10 +9,10 @@ declare(strict_types=1);
  * @link     https://github.com/wenber-yu
  */
 
-namespace WilburYu\HyperfCacheExt\Driver;
+namespace WenberYu\HyperfCacheExt\Driver;
 
-use WilburYu\HyperfCacheExt\Redis\Limiters\ConcurrencyLimiterBuilder;
-use WilburYu\HyperfCacheExt\Redis\Limiters\DurationLimiterBuilder;
+use WenberYu\HyperfCacheExt\Redis\Limiters\ConcurrencyLimiterBuilder;
+use WenberYu\HyperfCacheExt\Redis\Limiters\DurationLimiterBuilder;
 use Hyperf\Cache\Driver\RedisDriver as BaseRedisDriver;
 
 class RedisDriver extends BaseRedisDriver

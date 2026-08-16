@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace WilburYu\HyperfCacheExt\Listener;
+namespace WenberYu\HyperfCacheExt\Listener;
 
-use WilburYu\HyperfCacheExt\CounterLimiter;
+use WenberYu\HyperfCacheExt\CounterLimiter;
 use Hyperf\Contract\ConfigInterface;
 use Hyperf\Event\Annotation\Listener;
 use Hyperf\Framework\Event\BootApplication;

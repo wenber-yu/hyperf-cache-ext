@@ -9,7 +9,7 @@ declare(strict_types=1);
  * @link     https://github.com/wenber-yu
  */
 
-namespace WilburYu\HyperfCacheExt;
+namespace WenberYu\HyperfCacheExt;
 
 interface CacheInterface extends \Psr\SimpleCache\CacheInterface
 {

@@ -9,10 +9,10 @@ declare(strict_types=1);
  * @link     https://github.com/wenber-yu
  */
 
-namespace WilburYu\HyperfCacheExt\Redis\Limiters;
+namespace WenberYu\HyperfCacheExt\Redis\Limiters;
 
 use Hyperf\Stringable\Str;
-use WilburYu\HyperfCacheExt\Exception\LimiterTimeoutException;
+use WenberYu\HyperfCacheExt\Exception\LimiterTimeoutException;
 use Throwable;
 use Hyperf\Redis\Redis;
 

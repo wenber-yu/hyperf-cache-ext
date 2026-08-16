@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace WilburYu\HyperfCacheExt\CounterLimiting;
+namespace WenberYu\HyperfCacheExt\CounterLimiting;
 
 class GlobalLimit extends Limit
 {

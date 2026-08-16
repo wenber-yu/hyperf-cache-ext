@@ -7,7 +7,7 @@
  * @link     https://github.com/wenber-yu
  */
 
-namespace WilburYu\HyperfCacheExt\Aspect;
+namespace WenberYu\HyperfCacheExt\Aspect;
 
 use Hyperf\Contract\ConfigInterface;
 use Hyperf\Di\Annotation\Aspect;
@@ -19,8 +19,8 @@ use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\ContainerInterface;
 use Psr\Container\NotFoundExceptionInterface;
 use Psr\Http\Message\ResponseInterface;
-use WilburYu\HyperfCacheExt\Annotation\DurationRateLimiter;
-use WilburYu\HyperfCacheExt\Redis\Limiters\DurationLimiterBuilder;
+use WenberYu\HyperfCacheExt\Annotation\DurationRateLimiter;
+use WenberYu\HyperfCacheExt\Redis\Limiters\DurationLimiterBuilder;
 
 use function Hyperf\Support\make;
 #[Aspect]

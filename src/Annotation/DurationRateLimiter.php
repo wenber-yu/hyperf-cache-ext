@@ -7,7 +7,7 @@
  * @link     https://github.com/wenber-yu
  */
 
-namespace WilburYu\HyperfCacheExt\Annotation;
+namespace WenberYu\HyperfCacheExt\Annotation;
 
 use Attribute;
 use Hyperf\Di\Annotation\AbstractAnnotation;

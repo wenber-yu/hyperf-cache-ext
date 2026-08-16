@@ -9,15 +9,15 @@ declare(strict_types=1);
  * @link     https://github.com/wenber-yu
  */
 
-namespace WilburYu\HyperfCacheExt\Aspect;
+namespace WenberYu\HyperfCacheExt\Aspect;
 
 use Hyperf\Context\Context;
 use Hyperf\Di\Exception\Exception;
 use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\NotFoundExceptionInterface;
 use Psr\SimpleCache\InvalidArgumentException;
-use WilburYu\HyperfCacheExt\Annotation\CounterRateLimiterWithRedis;
-use WilburYu\HyperfCacheExt\Redis\Limiters\DurationLimiter;
+use WenberYu\HyperfCacheExt\Annotation\CounterRateLimiterWithRedis;
+use WenberYu\HyperfCacheExt\Redis\Limiters\DurationLimiter;
 use Hyperf\Di\Aop\ProceedingJoinPoint;
 use Hyperf\Di\Annotation\Aspect;
 use Hyperf\Redis\Redis;

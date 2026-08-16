@@ -7,7 +7,7 @@
  * @link     https://github.com/wenber-yu
  */
 
-namespace WilburYu\HyperfCacheExt\Exception;
+namespace WenberYu\HyperfCacheExt\Exception;
 
 use Exception;
 

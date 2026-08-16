@@ -9,7 +9,7 @@ declare(strict_types=1);
  * @link     https://github.com/wenber-yu
  */
 
-namespace WilburYu\HyperfCacheExt\CounterLimiting;
+namespace WenberYu\HyperfCacheExt\CounterLimiting;
 
 class Limit
 {

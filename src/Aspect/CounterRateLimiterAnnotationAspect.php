@@ -9,17 +9,17 @@ declare(strict_types=1);
  * @link     https://github.com/wenber-yu
  */
 
-namespace WilburYu\HyperfCacheExt\Aspect;
+namespace WenberYu\HyperfCacheExt\Aspect;
 
 use Hyperf\Collection\Arr;
 use Hyperf\Context\Context;
 use Hyperf\Di\Exception\Exception;
 use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\NotFoundExceptionInterface;
-use WilburYu\HyperfCacheExt\Annotation\CounterRateLimiter;
-use WilburYu\HyperfCacheExt\Annotation\CounterRateLimiterWithRedis;
-use WilburYu\HyperfCacheExt\CounterLimiter;
-use WilburYu\HyperfCacheExt\CounterLimiting\Unlimited;
+use WenberYu\HyperfCacheExt\Annotation\CounterRateLimiter;
+use WenberYu\HyperfCacheExt\Annotation\CounterRateLimiterWithRedis;
+use WenberYu\HyperfCacheExt\CounterLimiter;
+use WenberYu\HyperfCacheExt\CounterLimiting\Unlimited;
 use Closure;
 use Hyperf\Contract\ContainerInterface;
 use Hyperf\Di\Aop\ProceedingJoinPoint;
@@ -30,7 +30,7 @@ use Psr\Http\Message\ResponseInterface;
 use Hyperf\Support\Traits\InteractsWithTime;
 use Hyperf\Di\Aop\AbstractAspect;
 use Psr\SimpleCache\InvalidArgumentException;
-use WilburYu\HyperfCacheExt\Exception\CounterRateLimiterException;
+use WenberYu\HyperfCacheExt\Exception\CounterRateLimiterException;
 
 use function Hyperf\Collection\collect;
 

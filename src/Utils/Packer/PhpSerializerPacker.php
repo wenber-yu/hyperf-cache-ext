@@ -9,7 +9,7 @@ declare(strict_types=1);
  * @link     https://github.com/wenber-yu
  */
 
-namespace WilburYu\HyperfCacheExt\Utils\Packer;
+namespace WenberYu\HyperfCacheExt\Utils\Packer;
 
 class PhpSerializerPacker
 {

@@ -7,7 +7,7 @@
  * @link     https://github.com/wenber-yu
  */
 
-namespace WilburYu\HyperfCacheExt\Aspect;
+namespace WenberYu\HyperfCacheExt\Aspect;
 
 use Hyperf\Contract\ConfigInterface;
 use Hyperf\Di\Annotation\Aspect;
@@ -17,8 +17,8 @@ use Hyperf\HttpServer\Contract\RequestInterface;
 use Hyperf\Support\Traits\InteractsWithTime;
 use Psr\Container\ContainerInterface;
 use Psr\Http\Message\ResponseInterface;
-use WilburYu\HyperfCacheExt\Annotation\ConcurrencyRateLimiter;
-use WilburYu\HyperfCacheExt\Redis\Limiters\ConcurrencyLimiterBuilder;
+use WenberYu\HyperfCacheExt\Annotation\ConcurrencyRateLimiter;
+use WenberYu\HyperfCacheExt\Redis\Limiters\ConcurrencyLimiterBuilder;
 
 use function Hyperf\Support\make;
 

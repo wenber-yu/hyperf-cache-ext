@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace WilburYu\HyperfCacheExt;
+namespace WenberYu\HyperfCacheExt;
 
 use Closure;
 use Hyperf\Support\Traits\InteractsWithTime;

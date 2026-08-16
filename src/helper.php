@@ -8,10 +8,10 @@
  */
 
 use Hyperf\Context\ApplicationContext;
-use WilburYu\HyperfCacheExt\CacheInterface;
-use WilburYu\HyperfCacheExt\CounterLimiter;
-use WilburYu\HyperfCacheExt\Redis\Limiters\ConcurrencyLimiterBuilder;
-use WilburYu\HyperfCacheExt\Redis\Limiters\DurationLimiterBuilder;
+use WenberYu\HyperfCacheExt\CacheInterface;
+use WenberYu\HyperfCacheExt\CounterLimiter;
+use WenberYu\HyperfCacheExt\Redis\Limiters\ConcurrencyLimiterBuilder;
+use WenberYu\HyperfCacheExt\Redis\Limiters\DurationLimiterBuilder;
 
 if (!function_exists('counter_limiter')) {
     function counter_limiter()

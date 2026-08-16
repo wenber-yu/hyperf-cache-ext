@@ -33,8 +33,8 @@ composer require wenber-yu/hyperf-cache-ext
 'default' => env('CACHE_DRIVER', 'default'),
 'stores' => [
     'default' => [
-        'driver' => WilburYu\HyperfCacheExt\Driver\RedisDriver::class,
-        'packer' => WilburYu\HyperfCacheExt\Utils\Packer\PhpSerializerPacker::class,
+        'driver' => WenberYu\HyperfCacheExt\Driver\RedisDriver::class,
+        'packer' => WenberYu\HyperfCacheExt\Utils\Packer\PhpSerializerPacker::class,
         'prefix' => env('APP_NAME', 'skeleton').':cache:',
     ],
 ],
@@ -57,8 +57,8 @@ Hyperf 3.0/3.1 旧结构 (运行时自动兼容, 无需显式 `stores`):
 
 ```php
 'default' => [
-    'driver' => WilburYu\HyperfCacheExt\Driver\RedisDriver::class,
-    'packer' => WilburYu\HyperfCacheExt\Utils\Packer\PhpSerializerPacker::class,
+    'driver' => WenberYu\HyperfCacheExt\Driver\RedisDriver::class,
+    'packer' => WenberYu\HyperfCacheExt\Utils\Packer\PhpSerializerPacker::class,
     'prefix' => env('APP_NAME', 'skeleton').':cache:',
 ],
 'limiter' => [
@@ -76,12 +76,12 @@ Hyperf 3.0/3.1 旧结构 (运行时自动兼容, 无需显式 `stores`):
 2. 可捕获异常
 
 - 适用于计数器限流
-> WilburYu\HyperfCacheExt\Exception\CounterRateLimiterException::class
+> WenberYu\HyperfCacheExt\Exception\CounterRateLimiterException::class
 > 
 > 该异常自带一个 `getHeaders` 方法, 值为: array('X-RateLimit-Limit', 'X-RateLimit-Remaining', 'Retry-After', '
 > X-RateLimit-Reset')
 - 适用于漏斗与时间窗口限流
-> WilburYu\HyperfCacheExt\Exception\LimiterTimeoutException::class
+> WenberYu\HyperfCacheExt\Exception\LimiterTimeoutException::class
 
 # 使用
 
@@ -98,7 +98,7 @@ or
 - 漏斗限流注解
 
 ```php
-use WilburYu\HyperfCacheExt\Annotation\ConcurrencyRateLimiter;
+use WenberYu\HyperfCacheExt\Annotation\ConcurrencyRateLimiter;
 // 1秒内最高支持并发请求5次
 #[ConcurrencyRateLimiter(key: 'get.posts', maxAttempts: 5, decayMinutes: 1, timeout: 1, wait: 250)]
 ```
@@ -106,7 +106,7 @@ use WilburYu\HyperfCacheExt\Annotation\ConcurrencyRateLimiter;
 - 时间窗口限流注解
 
 ```php
-use WilburYu\HyperfCacheExt\Annotation\DurationRateLimiter;
+use WenberYu\HyperfCacheExt\Annotation\DurationRateLimiter;
 // 每 10 秒最多支持 100 个请求
 #[DurationRateLimiter(key: 'get.posts', maxAttempts: 100, decayMinutes: 10, timeout: 1, wait: 750)]
 - ```

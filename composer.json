@@ -17,7 +17,7 @@
     "description": "hyperf cache counter rate limiter",
     "autoload": {
         "psr-4": {
-            "WilburYu\\HyperfCacheExt\\": "src/"
+            "WenberYu\\HyperfCacheExt\\": "src/"
         },
         "files": [
             "src/helper.php"
@@ -60,7 +60,7 @@
     },
     "extra": {
         "hyperf": {
-            "config": "WilburYu\\HyperfCacheExt\\ConfigProvider"
+            "config": "WenberYu\\HyperfCacheExt\\ConfigProvider"
         }
     }
 }
