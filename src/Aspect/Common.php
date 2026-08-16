@@ -37,11 +37,28 @@ trait Common
             }
         }
 
-        $limiterConfig['prefix'] = $config->get('cache.default.prefix').$limiterConfig['prefix'] ?? 'rate-limiter:';
+        $limiterConfig['prefix'] = $this->getCachePrefix($config).($limiterConfig['prefix'] ?? 'rate-limiter:');
 
         unset($limiterConfig['for']);
 
         return $limiterConfig;
+    }
+
+    /**
+     * Get the cache key prefix from the cache config.
+     *
+     * Compatible with both the legacy cache config structure (hyperf 3.0/3.1,
+     * where cache.default is an array) and the new structure (hyperf 3.2+,
+     * where cache.default is the name of the store defined in cache.stores).
+     */
+    protected function getCachePrefix(ConfigInterface $config): string
+    {
+        $default = $config->get('cache.default', 'default');
+        if (is_array($default)) {
+            return $default['prefix'] ?? '';
+        }
+
+        return (string) $config->get('cache.stores.'.$default.'.prefix', '');
     }
 
     protected function getRateLimiterKey($annotation): ?string
@@ -77,7 +94,7 @@ trait Common
         ResponseInterface $response,
         int $maxAttempts,
         int $remainingAttempts,
-        int $retryAfter = null
+        ?int $retryAfter = null
     ): ResponseInterface {
         $headers = $this->getHeaders($maxAttempts, $remainingAttempts, $retryAfter, $response);
         if (method_exists($response, 'withAddedHeaders')) {
@@ -104,7 +121,7 @@ trait Common
     protected function getHeaders(
         int $maxAttempts,
         int $remainingAttempts,
-        int $retryAfter = null,
+        ?int $retryAfter = null,
         ?ResponseInterface $response = null
     ): array {
         if ($response && !is_null($response->getHeaderLine('X-RateLimit-Remaining'))

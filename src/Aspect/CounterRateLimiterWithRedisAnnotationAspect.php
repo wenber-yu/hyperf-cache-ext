@@ -83,7 +83,7 @@ class CounterRateLimiterWithRedisAnnotationAspect extends CounterRateLimiterAnno
      *
      * @return int
      */
-    protected function calculateRemainingAttempts(string $key, int $maxAttempts, int $retryAfter = null): int
+    protected function calculateRemainingAttempts(string $key, int $maxAttempts, ?int $retryAfter = null): int
     {
         return is_null($retryAfter) ? $this->remaining[$key] : 0;
     }

@@ -11,6 +11,11 @@ BETA
 - add
 - put
 
+# 环境要求
+
+- PHP >= 8.1
+- Hyperf >= 3.1 (支持 3.1 与 3.2)
+
 # 安装
 
 ```bash
@@ -19,13 +24,19 @@ composer require wenber-yu/hyperf-cache-ext
 
 # 配置
 
-1. 修改cache配置文件:
+> Hyperf 3.2 起, `cache.default` 由配置数组变为 `cache.stores` 中的 store 名称字符串.
+> 本包同时兼容两种结构: 3.0/3.1 的数组结构 (运行时会被框架自动转换为新结构) 与 3.2 的 `default + stores` 结构.
+
+1. 修改cache配置文件 (Hyperf 3.2+):
 
 ```php
-'default' => [
-    'driver' => WilburYu\HyperfCacheExt\Driver\RedisDriver::class,
-    'packer' => WilburYu\HyperfCacheExt\Utils\Packer\PhpSerializerPacker::class,
-    'prefix' => env('APP_NAME', 'skeleton').':cache:',
+'default' => env('CACHE_DRIVER', 'default'),
+'stores' => [
+    'default' => [
+        'driver' => WilburYu\HyperfCacheExt\Driver\RedisDriver::class,
+        'packer' => WilburYu\HyperfCacheExt\Utils\Packer\PhpSerializerPacker::class,
+        'prefix' => env('APP_NAME', 'skeleton').':cache:',
+    ],
 ],
 'limiter' => [
     'prefix' => 'rate-limit:',    // key前缀
@@ -39,6 +50,19 @@ composer require wenber-yu/hyperf-cache-ext
         },
     ],
     'key' => ThrottleRequest::key(),
+],
+```
+
+Hyperf 3.0/3.1 旧结构 (运行时自动兼容, 无需显式 `stores`):
+
+```php
+'default' => [
+    'driver' => WilburYu\HyperfCacheExt\Driver\RedisDriver::class,
+    'packer' => WilburYu\HyperfCacheExt\Utils\Packer\PhpSerializerPacker::class,
+    'prefix' => env('APP_NAME', 'skeleton').':cache:',
+],
+'limiter' => [
+    // ...同上
 ],
 ```
 

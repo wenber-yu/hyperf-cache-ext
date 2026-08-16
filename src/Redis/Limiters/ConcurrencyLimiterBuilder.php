@@ -144,7 +144,7 @@ class ConcurrencyLimiterBuilder
      * @return mixed
      *
      */
-    public function then(callable $callback, callable $failure = null): mixed
+    public function then(callable $callback, ?callable $failure = null): mixed
     {
         try {
             return (new ConcurrencyLimiter(
